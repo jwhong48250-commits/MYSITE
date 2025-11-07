@@ -19,35 +19,28 @@
   --color-accent: var(--color-blue);
   --color-accent-variant: var(--color-orange);
   --color-text: var(--color-white);
-
   --color-black: #050a13;
   --color-gray: #1b1e26;
   --color-blue: #03e8f9;
   --color-orange: #fd6413;
   --color-white: #fff;
-
   --size-max-width: 1200px;
 }
-
 * {
   box-sizing: border-box;
 }
-
 body {
-  font-family: "GowoonDodum";
+  font-family: GMarketSans;
   margin: 0;
 }
-
 a {
   text-decoration: none;
   color: var(--color-text);
 }
-
 ul {
   list-style: none;
   padding: 0;
 }
-
 /* header */
 .header {
   background-color: var(--color-primary);
@@ -60,36 +53,68 @@ ul {
   align-items: center;
   z-index: 10;
 }
-
 .header__logo {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-
 .header__logo__img {
   width: 36px;
   height: 36px;
 }
-
 .header__logo__title {
   font-size: 1.8rem;
 }
-
 .header__menu {
   display: flex;
   gap: 4px;
 }
-
 .header__menu__item {
   padding: 8px 16px;
 }
-
 .header__menu__item:hover {
   border-bottom: 1px solid var(--color-accent);
 }
-
 .header__menu__item.active {
   border: 1px solid var(--color-accent);
   border-radius: 5px;
+}
+/* home */
+#home {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  padding: 7rem 1rem 5rem;
+  text-align: center;
+}
+.home__avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  border: 3px solid var(--color-accent);
+  object-fit: cover;
+}
+.home__title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.home__title--strong {
+  color: var(--color-accent);
+}
+.home__description {
+  font-size: 1.5rem;
+}
+
+.home__contact {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-black);
+  margin: 2rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.home__contact:hover {
+  background-color: transparent;
+  color: var(--color-accent);
+  outline: 2px solid var(--color-accent);
 }
