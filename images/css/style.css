@@ -105,7 +105,7 @@ button {
 #home {
   background-color: var(--color-primary);
   color: var(--color-text);
-  padding: 7rem 1rem 5rem;
+  padding: 10rem 1rem 5rem;
   text-align: center;
 }
 .home__avatar {
@@ -114,6 +114,13 @@ button {
   border-radius: 100%;
   border: 3px solid var(--color-accent);
   object-fit: cover;
+  transition: transform 0.3s ease, border 0.3s ease;
+  cursor: pointer;
+}
+.home__avatar:hover {
+  /* 추가: 마우스 올렸을 때 확대 + 테두리 변경 */
+  transform: scale(1.1); /* ✨ 추가: 10% 확대 */
+  border: 6px solid #ffd700; /* ✨ 추가: 테두리 두께 + 색상 변경 */
 }
 .home__title {
   font-size: 3rem;
@@ -311,6 +318,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   transition: all 250ms ease-in;
   transform: translateY(-100px);
 }
@@ -343,6 +351,9 @@ button {
 }
 
 .license:nth-child(even) .license__img {
+  order: 1;
+}
+.license__img {
   width: 150px;
   height: 150px;
   border-radius: 100%;
@@ -399,7 +410,7 @@ button {
   .title {
     font-size: 2rem;
   }
-  description {
+  .description {
     font-size: 1rem;
   }
   .header {
@@ -445,7 +456,7 @@ button {
   .category {
     width: 100%;
   }
-  .project {
+  .projects {
     grid-template-columns: repeat(2, 1fr);
   }
   .license {
